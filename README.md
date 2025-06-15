@@ -1,7 +1,6 @@
 WhiteBoard Link.
 15-May---- Orientation
-https://miro.com/app/board/uXjVI1WSTyQ=/
-17-May
+https://miro.com/app/board/uXjVI1WSTyQ=/17-May
 
 </br>
 
