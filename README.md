@@ -1,11 +1,11 @@
 WhiteBoard Link.
 15-May---- Orientation
+
 https://miro.com/app/board/uXjVI1WSTyQ=/17-May
 
 </br>
 
-https://miro.com/app/board/uXjVI0S_fUs=/
-18-May
+https://miro.com/app/board/uXjVI0S_fUs=/18-May
 
 </br>
 
@@ -14,23 +14,19 @@ https://miro.com/app/board/uXjVIziHFCw=/
 
 </br>
 
-https://miro.com/app/board/uXjVIwnNDcg=/
-25-May
+https://miro.com/app/board/uXjVIwnNDcg=/25-May
 
 </br>
 
-https://miro.com/app/board/uXjVIw22Kig=/
-31-May
+https://miro.com/app/board/uXjVIw22Kig=/31-May
 
 </br>
 
-https://miro.com/app/board/uXjVItnYYqQ=/
-01-June
+https://miro.com/app/board/uXjVItnYYqQ=/01-June
 
 </br>
 
-https://miro.com/app/board/uXjVItxcNcU=/
-07-June
+https://miro.com/app/board/uXjVItxcNcU=/07-June
 
 </br>
 
