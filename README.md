@@ -40,6 +40,11 @@ https://miro.com/app/board/uXjVIqgNq7I=/14-june
 
 https://miro.com/app/board/uXjVIo_GuhY=/?share_link_id=562917544454
 
+</br>
+### 21 june 
+</br>
+21June: https://miro.com/app/board/uXjVImdGhb0=/?share_link_id=312321095753
+
 
 </br>
 
