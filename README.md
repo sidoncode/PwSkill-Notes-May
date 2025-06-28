@@ -52,5 +52,10 @@ https://miro.com/app/board/uXjVIo_GuhY=/?share_link_id=562917544454
 
 </br>
 
+28th june
+</br>
+
+Whiteboard link: https://miro.com/app/board/uXjVIjDv6cE=/?share_link_id=372714384381
+
 https://miro.com/app/board/uXjVIoE0pwE=/?share_link_id=752567485575
 
