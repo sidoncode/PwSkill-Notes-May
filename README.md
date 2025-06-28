@@ -45,6 +45,10 @@ https://miro.com/app/board/uXjVIo_GuhY=/?share_link_id=562917544454
 </br>
 21June: https://miro.com/app/board/uXjVImdGhb0=/?share_link_id=312321095753
 
+</br>
+
+22nd june: https://miro.com/app/board/uXjVIlphNOQ=/?share_link_id=675621389751
+
 
 </br>
 
