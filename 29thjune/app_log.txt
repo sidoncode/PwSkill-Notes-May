@@ -1,0 +1,5 @@
+2025-06-29 20:10:50,222 - DEBUG - Debug Message
+2025-06-29 20:10:50,222 - INFO - info Message
+2025-06-29 20:10:50,222 - WARNING - Warning Message
+2025-06-29 20:10:50,222 - ERROR - error Message
+2025-06-29 20:10:50,222 - CRITICAL - Critical Message
