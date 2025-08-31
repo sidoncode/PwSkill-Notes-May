@@ -32,3 +32,5 @@
 | 17-Aug    | [Link](https://miro.com/app/board/uXjVJTVRHCA=/?share_link_id=865240522891) |
 | 23-Aug    | [Link](https://miro.com/app/board/uXjVJQvg95Q=/?share_link_id=50472468947) |
 | 24-Aug    | [Link](https://miro.com/app/board/uXjVJQ2e-m0=/?share_link_id=573713669299) |
+| 30-Aug    | [Link](https://miro.com/app/board/uXjVJOPOS-s=/?share_link_id=6254991193) |
+| 31-Aug    | [Link] (https://miro.com/app/board/uXjVJOVcvpw=/?share_link_id=493526209931) |
