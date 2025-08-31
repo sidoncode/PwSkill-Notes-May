@@ -57,4 +57,6 @@ https://miro.com/app/board/uXjVJTNjrTY=/?share_link_id=144907197232
 https://miro.com/app/board/uXjVJTVRHCA=/?share_link_id=865240522891
 23-Aug
 https://miro.com/app/board/uXjVJQvg95Q=/?share_link_id=50472468947
+24-Aug
+https://miro.com/app/board/uXjVJQ2e-m0=/?share_link_id=573713669299
 
