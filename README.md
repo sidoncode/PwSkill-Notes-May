@@ -40,6 +40,8 @@
 | 14-SEPT    | [Link](https://miro.com/app/board/uXjVJIHavN0=/?share_link_id=486702073989) |
 | 20-SEPT    | [Link](https://miro.com/app/board/uXjVJFCDauo=/?share_link_id=671705301046) |
 | 21-SEPT    | [Link](https://miro.com/app/board/uXjVJFMcYEA=/?share_link_id=879420394976) |
+| 27-SEP     | Dussehra Holidays |
+| 28-SEP     | Dussehra Holidays |
 | 04-OCT    | [Link](https://miro.com/app/board/uXjVJ-grNXg=/?share_link_id=180076429952) |
 | 05-OCT    | [Link](https://miro.com/app/board/uXjVJ-xTh2c=/?share_link_id=855448174914) |
 
