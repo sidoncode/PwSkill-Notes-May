@@ -42,7 +42,7 @@
 | 21-SEPT    | [Link](https://miro.com/app/board/uXjVJFMcYEA=/?share_link_id=879420394976) |
 | 04-OCT    | [Link](https://miro.com/app/board/uXjVJ-grNXg=/?share_link_id=180076429952) |
 | 05-OCT    | [Link](https://miro.com/app/board/uXjVJ-xTh2c=/?share_link_id=855448174914) |
-
+| 11-OCT    | [Link](https://miro.com/app/board/uXjVJ74mVdM=/?share_link_id=209027007700) |
 
 
 
