@@ -1,0 +1,123 @@
+prometheus and grafana setup:
+
+
+after connecting to ec2: followup with cmds;
+
+
+>> sudo yum update -y
+>> sudo yum install python3-pip -y
+
+
+install python and pip
+
+>> python3 --version
+>> sudo python3 -m ensurepip
+>> pip3 --version
+
+
+
+installing flask and prometheus-client
+
+>> pip3 install flask prometheus-client
+
+------------------------------------------------------------------------------------------
+
+creating a python project named as app.py
+
+>> sudo nano app.py
+
+from flask import Flask
+from prometheus_client import Counter, generate_latest
+
+app = Flask(__name__)
+
+REQUEST_COUNT = Counter('app_requests_total', 'Total number of requests')
+
+@app.route('/')
+def home():
+    REQUEST_COUNT.inc()
+    return "Hello from EC2 Python App!"
+
+@app.route('/metrics')
+def metrics():
+    return generate_latest(), 200, {'Content-Type': 'text/plain; charset=utf-8'}
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8000)
+    
+    
+-------- EOF ------ 
+    
+>> python3 app.py 
+
+
+-------- -------- -------- -------- -------- -------- -------- -------- 
+
+Now open in your browser:
+
+App: http://<EC2_PUBLIC_IP>:8000/
+
+Metrics: http://<EC2_PUBLIC_IP>:8000/metrics
+
+
+-- confugure dashboard --
+
+
+cd /opt
+sudo yum install -y wget tar
+sudo wget https://github.com/prometheus/prometheus/releases/download/v3.7.0-rc.0/prometheus-3.7.0-rc.0.linux-amd64.tar.gz
+sudo tar xvf prometheus-3.7.0-rc.0.linux-amd64.tar.gz
+
+
+
+
+configuration of mapping:
+>> cd prometheus-3.7.0-rc.0.linux-amd64
+
+
+>> sudo nano prometheus.yml
+
+
+-- run promethus --
+
+>> ./prometheus --config.file=prometheus.yml
+
+----- writing data in a folder wiht log files ----
+
+>> cd /opt/prometheus-3.7.0-rc.0.linux-amd64
+>> sudo mkdir data
+>> sudo chown ec2-user:ec2-user data
+>> ./prometheus --config.file=prometheus.yml
+
+
+----pro
+
+
+>> cd home/ec2-user
+
+>> nohup python3 app.py &
+
+
+
+
+---- Remember to add a rule to security group as 9090 port TCP: anywhere 0.0.0.0/0
+
+
+
+
+
+>>> queries:
+
+app_requests_total
+
+rate(app_requests_total[1m])
+
+Rate -> how many requests per minute
+
+increase(app_requests_total[5m])
+
+
+
+    
+
+
