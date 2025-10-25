@@ -1,0 +1,174 @@
+ubuntu ec2  with t3.large
+Networks Edit: https / http (enable)
+
+Custom TCP:
+- Source Anywhere
+>> port
+	>> 9200, 9300, 5601
+  
+  
+Configure storage increase to 18GB
+
+--- - ------- installing docker -- ------------ 
+
+Step 1: Update packages
+>> sudo apt update -y
+>> sudo apt upgrade -y
+
+Step 2: Install prerequisites
+>> sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+ 
+Step 3: Add Docker’s official GPG key
+>> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+ 
+Step 4: Add Docker repository
+>> echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ 
+Step 5: Update packages again
+>> sudo apt update -y
+ 
+Step 6: Install Docker
+>> sudo apt install -y docker-ce docker-ce-cli containerd.io
+ 
+Step 7: Verify Docker installation
+>> docker --version
+
+
+>> docker-compose --version
+
+-------- ------------------------  installing docker-compose --------------------------------
+
+Step 8: Install Docker Compose
+>> sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+>> sudo chmod +x /usr/local/bin/docker-compose
+
+>> docker-compose --version
+
+
+
+
+-------- ------------------------  installing and configuring ELK --------------------------------
+
+Create a folder named elk-ec2:
+
+>> mkdir elk-ec2 && cd elk-ec2
+
+>> nano docker-compose.yml
+
+paste below content to docker-compose.yml file:
+
+
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.9.0
+    container_name: elasticsearch
+    environment:
+      - node.name=es01
+      - cluster.name=elk-cluster
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=AdminPass123   # <-- Admin password
+      - xpack.security.enabled=true
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m  # Low memory for small EC2
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.9.0
+    container_name: kibana
+    environment:
+      ELASTICSEARCH_HOSTS: "https://elasticsearch:9200"
+      ELASTICSEARCH_USERNAME: "elastic"
+      ELASTICSEARCH_PASSWORD: "AdminPass123"
+      SERVER_SSL_ENABLED: "false"   # Disable TLS for testing
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.9.0
+    container_name: filebeat
+    user: root
+    volumes:
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/log:/var/log:ro
+    depends_on:
+      - elasticsearch
+
+volumes:
+  es_data:
+    driver: local
+
+
+>> sudo docker-compose up -d
+
+
+----- filebeat issue ( due to missing yaml file)--- -----
+
+>> cd filebeat
+>> sudo rmdir filebeat.yml/
+>> sudo nano filebeat.yml
+
+
+
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/syslog
+      - /var/log/auth.log
+
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  username: "elastic"
+  password: "My$trongPass@2025"
+
+setup.kibana:
+  host: "http://kibana:5601"
+
+setup.ilm.enabled: false
+logging.to_files: false
+
+
+
+
+--- - ----- - - -- - -- - -- - --for the token of kibana --- --------
+
+>> sudo docker exec -it elasticsearch bash
+>> bin/elasticsearch-service-tokens create elastic/kibana kibana_token
+>> exit
+
+-- navigate to the docker-compose file --- cd elk-ec2
+>> sudo nano docker-compose.yml
+
+replace 
+
+ELASTICSEARCH_USERNAME: "elastic"
+ELASTICSEARCH_PASSWORD: "AdminPass123"
+
+WITH
+
+ELASTICSEARCH_SERVICEACCOUNTTOKEN: "PASTE your TOKEN"
+
+Restart only Kibana
+
+>> sudo docker-compose up -d kibana
+
+
+
+
+
+
+
+
+
+
