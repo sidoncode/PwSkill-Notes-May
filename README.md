@@ -45,6 +45,7 @@
 | 11-OCT    | [Link](https://miro.com/app/board/uXjVJ74mVdM=/?share_link_id=209027007700) |
 | 12-OCT    | [Link](https://miro.com/app/board/uXjVJ7JHn5Q=/?share_link_id=11026445008) |
 | 25-OCT    | [Link](https://miro.com/app/board/uXjVJ0z6UGA=/?share_link_id=476640323221) |
+| 26-OCT    | [Link](https://miro.com/app/board/uXjVJ0DqfMA=/?share_link_id=151408646339) |
 
 
 
