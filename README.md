@@ -48,6 +48,8 @@
 | 26-OCT    | [Link](https://miro.com/app/board/uXjVJ0DqfMA=/?share_link_id=151408646339) |
 | 01-NOV    | [Link](https://miro.com/app/board/uXjVJxKnj08=/?share_link_id=287016516110) |
 | 02-NOV    | [Link](https://miro.com/app/board/uXjVJxbp-8k=/?share_link_id=565295163092) |
+| 08-NOV    | [Link](https://miro.com/app/board/uXjVJtkdWQQ=/?share_link_id=678193228838) |
+
 
 
 
