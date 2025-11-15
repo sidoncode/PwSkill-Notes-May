@@ -50,7 +50,7 @@
 | 02-NOV    | [Link](https://miro.com/app/board/uXjVJxbp-8k=/?share_link_id=565295163092) |
 | 08-NOV    | [Link](https://miro.com/app/board/uXjVJtkdWQQ=/?share_link_id=678193228838) |
 | 09-NOV    | [Link](https://miro.com/app/board/uXjVJt6sUGQ=/?share_link_id=19327262057) |
-
+| 15-NOV    | [Link](https://miro.com/app/board/uXjVJqMZ7SI=/?share_link_id=917333830144) |
 
 
 
