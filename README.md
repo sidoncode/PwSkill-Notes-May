@@ -53,6 +53,7 @@
 | 15-NOV    | [Link](https://miro.com/app/board/uXjVJqMZ7SI=/?share_link_id=917333830144) |
 | 16-NOV    | [Link](https://miro.com/app/board/uXjVJpiI4xA=/?share_link_id=275250956649) |
 | 22-NOV    | [Link](https://miro.com/app/board/uXjVJm5t6r4=/?share_link_id=776364152762) |
+| 29-NOV    | [Link](https://miro.com/app/board/uXjVJjfGAcI=/?share_link_id=638092129475) |
 
 
 
